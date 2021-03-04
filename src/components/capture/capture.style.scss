@@ -1,0 +1,39 @@
+
+.capture-input-container {
+  width: 100%;
+  margin-right: 10px;
+  height: 90%;
+}
+
+.capture-input {
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  margin-top: 10px;
+  min-height: 80px;
+  resize: none;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.tweet-button-container {
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.tweet-button {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.tweet-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
