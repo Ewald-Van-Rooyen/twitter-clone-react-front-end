@@ -1,7 +1,7 @@
 export interface TweetInterface {
     id: number;
     tweet: string;
-    clasp: number;
+    claps: number;
     date: string;
     userId: number;
 }

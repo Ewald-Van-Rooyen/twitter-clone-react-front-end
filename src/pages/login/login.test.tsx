@@ -86,5 +86,5 @@ describe("Login component tests", () => {
         const passwordErrorMessage = container.querySelector("#passwordErrorMessage");
         expect(passwordErrorMessage.innerHTML).toBe("Password should be of minimum 4 characters length");
     });
-    
+
 });
