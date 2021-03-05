@@ -11,13 +11,17 @@
   min-height: 80px;
   resize: none; }
 
+.tweet-form {
+  width: 100%; }
+
 *:focus {
   outline: 0; }
 
 .tweet-button-container {
   display: flex;
   margin-left: auto;
-  margin-top: auto; }
+  margin-top: auto;
+  flex-direction: row-reverse; }
 
 .tweet-button {
   font-size: 16px;
