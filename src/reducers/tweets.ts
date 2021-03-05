@@ -7,7 +7,7 @@ const initialState: TweetsGlobalStateInterface = {
 
 const tweets = (state: TweetsGlobalStateInterface = initialState, action: any) => {
     switch (action.type) {
-        case TWEETS_ACTIONS.GET_TWEETS:
+        case TWEETS_ACTIONS.UPLOAD_ALL_TWEETS:
             return {
                 ...state,
                 tweets: action.payload

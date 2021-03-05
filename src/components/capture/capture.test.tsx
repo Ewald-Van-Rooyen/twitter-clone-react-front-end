@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import {act} from 'react-dom/test-utils';
 
 import React from "react";
-import Capture from "../capture/capture";
+import Capture from "./capture";
 
 let container: any;
 const defaultProfilePic = "https://avatarfiles.alphacoders.com/174/174225.jpg";

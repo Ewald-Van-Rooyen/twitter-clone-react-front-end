@@ -1,0 +1,107 @@
+.login-fieldset {
+  border: none; }
+
+@keyframes button-twitter-animation {
+  from {
+    top: 50%;
+    height: 10em;
+    width: 10em; }
+  to {
+    top: -3em;
+    height: 6em;
+    width: 6em; } }
+@keyframes login-fadein {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+* {
+  font-size: 12px; }
+
+.main {
+  position: relative;
+  margin-top: 30vh; }
+
+.login-fieldset-field, .login-fieldset-submit {
+  min-width: 250px;
+  font-size: 1.6em;
+  margin: 0.8em auto;
+  padding: 0.8em;
+  width: 80%;
+  box-sizing: border-box; }
+
+.login {
+  width: 300px;
+  box-sizing: border-box;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  border: 0;
+  border-radius: 5px; }
+  .login input {
+    border: #e8f0fe 1px solid; }
+  .login input:focus {
+    border: 1px solid #55acee; }
+  .login-sides {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    border: 0;
+    border-radius: 5px; }
+  .login-fieldset {
+    animation: login-fadein 0.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 5em 0;
+    opacity: 0; }
+    .login-fieldset-field {
+      border: 0;
+      border: 1px solid #f2f2f2; }
+    .login-fieldset-submit {
+      background-color: #55acee;
+      color: #fff;
+      font-weight: bold;
+      border: 0;
+      border-radius: 3px; }
+
+.button-twitter {
+  animation: button-twitter-animation 0.5s forwards;
+  background-image: url("https://image.flaticon.com/icons/svg/145/145812.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: #55acee;
+  margin: auto;
+  z-index: 1;
+  border: 0;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  top: auto;
+  height: 6em;
+  width: 6em; }
+
+.login-fieldset-submit {
+  font-weight: bold;
+  border-radius: 20px; }
+
+.error-message-container {
+  margin: auto;
+  color: red; }
+
+.login-fieldset-submit:hover {
+  opacity: 0.5;
+  cursor: pointer; }
+
+/*# sourceMappingURL=login.styles.css.map */

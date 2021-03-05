@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component tests should render the Login component 1`] = `
+<main
+  className="main"
+>
+  <div
+    className="button-twitter"
+  />
+  <form
+    className="login"
+    onSubmit={[Function]}
+  >
+    <svg
+      className="login-sides"
+    >
+      <line
+        className="top-right first"
+        x1="50%"
+        x2="100%"
+        y1="0"
+        y2="0"
+      />
+      <line
+        className="top-left first"
+        x1="50%"
+        x2="0"
+        y1="0"
+        y2="0"
+      />
+      <line
+        className="right second"
+        x1="100%"
+        x2="100%"
+        y1="0"
+        y2="100%"
+      />
+      <line
+        className="left second"
+        x1="0"
+        x2="0"
+        y1="0"
+        y2="100%"
+      />
+      <line
+        className="bottom-left third"
+        x1="0"
+        x2="50%"
+        y1="100%"
+        y2="100%"
+      />
+      <line
+        className="bottom-right third"
+        x1="100%"
+        x2="50%"
+        y1="100%"
+        y2="100%"
+      />
+    </svg>
+    <fieldset
+      className="login-fieldset"
+    >
+      <input
+        className="login-fieldset-field"
+        name="username"
+        onChange={[Function]}
+        placeholder="Username"
+        type="text"
+        value=""
+      />
+      <input
+        className="login-fieldset-field"
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+      <button
+        className="login-fieldset-submit"
+        type="submit"
+      >
+        Log In
+      </button>
+    </fieldset>
+  </form>
+</main>
+`;

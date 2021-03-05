@@ -1,4 +1,4 @@
 export const TWEETS_ACTIONS = Object.freeze({
-    GET_TWEETS: "GET_TWEETS",
+    UPLOAD_ALL_TWEETS: "UPLOAD_ALL_TWEETS",
     ADD_TWEET: "ADD_TWEET",
 });

@@ -26,4 +26,7 @@ img {
   align-items: flex-start;
   font-size: 14px; }
 
+*:focus {
+  outline: 0; }
+
 /*# sourceMappingURL=App.css.map */
