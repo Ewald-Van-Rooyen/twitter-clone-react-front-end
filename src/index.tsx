@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import reportWebVitals from "./reportWebVitals";
 import {Provider} from "react-redux";
 import store from "./redux/store";
+import App from "./App";
+import "./index.scss";
 
 ReactDOM.render(
     <React.StrictMode>
+        {/* Setup of the Redux store, to make it available to the rest of the application*/}
         <Provider store={store}>
             <App/>
         </Provider>

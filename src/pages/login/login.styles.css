@@ -39,7 +39,7 @@
   background-color: white;
   position: relative;
   border: 0;
-  border-radius: 5px; }
+  border-radius: 15px; }
   .login input {
     border: #e8f0fe 1px solid; }
   .login input:focus {

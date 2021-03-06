@@ -1,11 +1,11 @@
-import {TweetsGlobalStateInterface} from "../../interfaces/tweetsGlobalState";
-import {TWEETS_ACTIONS} from "../actions/tweetConstants";
+import {TweetsGlobalStateInterface} from "../../interfaces/globalStateInterface";
+import {TWEETS_ACTIONS} from "../actions/tweet/tweetConstants";
 
 const initialState: TweetsGlobalStateInterface = {
     tweets: []
 };
 
-const tweetsReducers = (state: TweetsGlobalStateInterface = initialState, action: any) => {
+const tweetReducer = (state: TweetsGlobalStateInterface = initialState, action: any) => {
     switch (action.type) {
         case TWEETS_ACTIONS.FETCH_TWEETS:
             return {
@@ -22,4 +22,4 @@ const tweetsReducers = (state: TweetsGlobalStateInterface = initialState, action
     }
 };
 
-export default tweetsReducers;
+export default tweetReducer;

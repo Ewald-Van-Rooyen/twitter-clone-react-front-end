@@ -88,7 +88,7 @@ $animation-time: 0.5s;
   margin: auto;
   background-color: white;
   @include position(relative);
-  @include border($radius: 5px);
+  @include border($radius: 15px);
 
   input {
     border: #e8f0fe 1px solid;

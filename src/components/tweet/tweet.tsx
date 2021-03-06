@@ -1,15 +1,22 @@
 import React from "react";
-import {TweetPropsInterfaces} from "./tweetInterfaces";
-import "./tweet.style.scss";
 
-const Tweet = (props: TweetPropsInterfaces) => {
+import "./tweet.style.scss";
+import {useSelector} from "react-redux";
+import {getUserById, getUserDetailsById} from "../../redux/selector";
+import {TweetInterface} from "../../interfaces/tweetInterface";
+import {GlobalStateInterface} from "../../interfaces/globalStateInterface";
+
+const Tweet = (props: TweetInterface) => {
+    const user = useSelector((state: GlobalStateInterface) => getUserById(state, props.userId));
+    const details = useSelector((state: GlobalStateInterface) => getUserDetailsById(state, user.usersDetailsId));
+
     return (
         <div className="container">
             <div className="horizontal-container">
-                <img src={`${props.profilePic}`} alt="" className="avatar"/>
+                <img src={`${user.profilePic}`} alt="" className="avatar"/>
                 <div className="tweet-header-info">
-                    {props.fullname}
-                    <span>{props.username}</span>
+                    {details.firstName + details.lastName}
+                    <span>{user.username}</span>
                     <span>{props.date}</span>
                     <p> {props.tweet}</p>
                 </div>

@@ -6,7 +6,7 @@ const Loader = () => {
         <>
             <svg version="1.1" id="twitter-bird" xmlns="http://www.w3.org/2000/svg"
                  xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 18 15" enable-background="new 0 0 18 15" xmlSpace="preserve">
+                 viewBox="0 0 18 15" enableBackground="new 0 0 18 15" xmlSpace="preserve">
                 <path id="bird-body" fill="#1ca1f2" d="M5.4,11.4c-1.3,1-2.9,1.6-4.6,1.6c-0.3,0-0.6,0-0.9-0.1c1.6,1,3.6,1.7,5.7,1.7
 	c6.8,0,10.5-5.6,10.5-10.5c0-0.2,0-0.3,0-0.5c0.7-0.5,1.3-1.2,1.8-1.9c-0.6,0.3-1.3,0.5-2,0.6c0.8-0.5,1.3-1.2,1.6-2
 	C16.8,0.7,16,1,15.2,1.2C14.5,0.4,13.5,0,12.5,0c-2,0-3.7,1.7-3.7,3.7c0,0.3,0,0.6,0.1,0.8C7.2,5.9,5.2,10.9,5.4,11.4"/>

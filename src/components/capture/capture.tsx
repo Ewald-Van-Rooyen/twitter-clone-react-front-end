@@ -1,13 +1,13 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./capture.style.scss";
-
-interface CapturePropsInterface {
-    profilePic?: string;
-}
+import {useSelector} from "react-redux";
+import {getUser} from "../../redux/selector";
+import {UserInterface} from "../../interfaces/userInterface";
 
 const maxCharacterLength = 280;
 
-const Capture = ({profilePic = "https://avatarfiles.alphacoders.com/174/174225.jpg"}: CapturePropsInterface) => {
+const Capture = () => {
+    const activeUser: UserInterface = useSelector(getUser);
     const [tweet, setTweet] = useState("");
 
     const handleSubmit = (event: React.SyntheticEvent) => {
@@ -33,7 +33,7 @@ const Capture = ({profilePic = "https://avatarfiles.alphacoders.com/174/174225.j
     return (<div className="container">
 
         <div className="horizontal-container">
-            <img src={`${profilePic}`} alt="" className="avatar"/>
+            <img src={`${activeUser.profilePic}`} alt="" className="avatar"/>
             <form onSubmit={handleSubmit} className={"tweet-form"}>
                 <div className="capture-input-container">
                         <textarea value={tweet} onChange={handleChange} className="capture-input"

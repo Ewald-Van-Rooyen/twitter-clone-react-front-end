@@ -1,0 +1,3 @@
+export const USERS_DETAILS_ACTIONS = Object.freeze({
+    FETCH_USERS_DETAILS: "FETCH_USERS_DETAILS",
+});

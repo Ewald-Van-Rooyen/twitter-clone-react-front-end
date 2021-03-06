@@ -1,5 +1,5 @@
-import {TweetInterface} from "../../interfaces/tweet";
-import { TWEETS_ACTIONS } from "./tweetConstants";
+import {TweetInterface} from "../../../interfaces/tweetInterface";
+import {TWEETS_ACTIONS} from "./tweetConstants";
 
 export const addTweet = (tweet: TweetInterface) => ({
     type: TWEETS_ACTIONS.ADD_TWEET,
