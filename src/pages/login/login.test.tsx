@@ -1,7 +1,7 @@
 import TestRenderer, {ReactTestRenderer} from "react-test-renderer";
 
 import React from "react";
-import Login from "./login";
+import LoginPage from "./loginPage";
 import {fireEvent, render, screen, wait, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
@@ -12,14 +12,14 @@ describe("Login component tests", () => {
 
     it("should render the Login component", () => {
         testRenderer = TestRenderer.create(
-            <Login onSubmitClickCallback={() => {
+            <LoginPage onSubmitClickCallback={() => {
             }}/>
         );
         expect(testRenderer).toMatchSnapshot();
     });
 
     test('rendering and submitting a basic Formik form failing vallidation', async () => {
-        const {container} = render(<Login onSubmitClickCallback={() => {
+        const {container} = render(<LoginPage onSubmitClickCallback={() => {
         }}/>);
 
 
@@ -55,7 +55,7 @@ describe("Login component tests", () => {
     });
 
     test("rendering and submitting a basic Formik form failing password length", async () => {
-        const {container} = render(<Login onSubmitClickCallback={() => {
+        const {container} = render(<LoginPage onSubmitClickCallback={() => {
         }}/>);
 
 

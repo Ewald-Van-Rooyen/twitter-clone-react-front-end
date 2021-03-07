@@ -3,11 +3,13 @@ import "./header.styles.scss";
 import {HeaderPropsInterface} from "./headerInterfaces";
 
 const Header = (props: HeaderPropsInterface) => {
+
+    // TODO only display icons on mobile
     return (<>
         <div className="header-container ">
             <nav>
                 <div className="display-flex">
-                    <div className="display-flex home-icon">
+                    <div onClick={props.onHomeClickCallback} className="display-flex home-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                              className="bi bi-house-fill svg-left-margin" viewBox="0 0 16 16">
                             <path fillRule="evenodd"
@@ -19,7 +21,7 @@ const Header = (props: HeaderPropsInterface) => {
                             Home
                         </h4>
                     </div>
-                    <div className="display-flex">
+                    <div onClick={props.onUserClickCallback} className="display-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                              className="bi bi-person-fill svg-left-margin" viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -28,7 +30,7 @@ const Header = (props: HeaderPropsInterface) => {
                             User Account
                         </h4>
                     </div>
-                    <div className="display-flex logout-icon">
+                    <div onClick={props.onLogoutClickCallback} className="display-flex logout-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                              className="bi bi-box-arrow-left svg-left-margin" viewBox="0 0 16 16">
                             <path fillRule="evenodd"
@@ -36,7 +38,7 @@ const Header = (props: HeaderPropsInterface) => {
                             <path fillRule="evenodd"
                                   d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
                         </svg>
-                        <h4 onClick={props.logoutClickCallback} className="header-h3-item">
+                        <h4 className="header-h3-item">
                             Log Out
                         </h4>
                     </div>

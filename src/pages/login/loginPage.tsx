@@ -20,7 +20,7 @@ import {setActiveUser} from "../../redux/actions/user/userActions";
  * @param props:LoginPropsInterface callback function to hide the login screen
  * @constructor
  */
-const Login = (props: LoginPropsInterface) => {
+const LoginPage = (props: LoginPropsInterface) => {
 
     const [showLoader, setShowLoader] = useState(false);
     const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -105,4 +105,4 @@ const Login = (props: LoginPropsInterface) => {
     );
 };
 
-export default Login;
+export default LoginPage;

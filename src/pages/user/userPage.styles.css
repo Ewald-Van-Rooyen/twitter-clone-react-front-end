@@ -1,0 +1,21 @@
+.user-icon {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: auto;
+  z-index: 1;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  top: -55px;
+  height: 9em;
+  width: 9em; }
+
+.user-main {
+  position: relative;
+  margin-top: 10vh;
+  font-size: 12px; }
+
+/*# sourceMappingURL=userPage.styles.css.map */

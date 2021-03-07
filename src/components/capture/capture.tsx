@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 import {useDispatch, useSelector} from "react-redux";
-import {getUser} from "../../redux/selector";
+import {getActiveUser} from "../../redux/selector";
 import {UserInterface} from "../../interfaces/userInterface";
 
 import "./capture.style.scss";
@@ -32,7 +32,7 @@ const getTodaysDate = (): string => {
  * @constructor
  */
 const Capture = () => {
-    const activeUser: UserInterface = useSelector(getUser);
+    const activeUser: UserInterface = useSelector(getActiveUser);
     const [tweet, setTweet] = useState("");
     const dispatch = useDispatch();
 

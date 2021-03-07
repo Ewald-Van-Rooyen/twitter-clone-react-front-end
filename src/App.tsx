@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./App.scss";
 
-import Login from "./pages/login/login";
-import Feed from "./pages/feed";
+import LoginPage from "./pages/login/loginPage";
+import FeedPage from "./pages/feedPage";
 
 /**
  * App navigates to the login screen on default
@@ -10,7 +10,7 @@ import Feed from "./pages/feed";
  * and display the feed page
  * @constructor
  */
-function App() {
+const App = () => {
     const [showLoginScreen, setShowLoginScreen] = useState(true);
     const [showFeedScreen, setShowFeedScreen] = useState(false);
 
@@ -26,10 +26,10 @@ function App() {
 
     return (
         <>
-            {showFeedScreen && <Feed onLogoutClickCallback={onLogoutClickCallback}/>}
-            {showLoginScreen && <Login onSubmitClickCallback={onSubmitClickCallback}/>}
+            {showLoginScreen && <LoginPage onSubmitClickCallback={onSubmitClickCallback}/>}
+            {showFeedScreen && <FeedPage onLogoutClickCallback={onLogoutClickCallback}/>}
         </>
     );
-}
+};
 
 export default App;

@@ -25,7 +25,7 @@ describe("Capture component tests", () => {
 
     it("should match the props", () => {
         const testRenderer = TestRenderer.create(
-            <Capture profilePic={defaultProfilePic}/>
+            <Capture/>
         );
         const testInstance = testRenderer.root;
 

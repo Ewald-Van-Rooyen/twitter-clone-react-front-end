@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import "./tweet.style.scss";
 import {useDispatch, useSelector} from "react-redux";
-import {getUser, getUserById, getUserDetailsById} from "../../redux/selector";
+import {getActiveUser, getUserById, getUserDetailsById} from "../../redux/selector";
 import {TweetInterface} from "../../interfaces/tweetInterface";
 import {GlobalStateInterface} from "../../interfaces/globalStateInterface";
 import {UserInterface} from "../../interfaces/userInterface";
@@ -17,7 +17,7 @@ import Loader from "../loader/loader";
  */
 const Tweet = (props: TweetInterface) => {
     const [showLoader, setShowLoader] = useState(false);
-    const activeUser: UserInterface = useSelector(getUser);
+    const activeUser: UserInterface = useSelector(getActiveUser);
     const user = useSelector((state: GlobalStateInterface) => getUserById(state, props.userId));
     const details = useSelector((state: GlobalStateInterface) => getUserDetailsById(state, user.usersDetailsId));
     const dispatch = useDispatch();

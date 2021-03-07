@@ -88,7 +88,8 @@
   right: 0;
   top: auto;
   height: 6em;
-  width: 6em; }
+  width: 6em;
+}
 
 .login-fieldset-submit {
   font-weight: bold;

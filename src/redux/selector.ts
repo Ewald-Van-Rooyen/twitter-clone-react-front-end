@@ -7,7 +7,7 @@ export const getTweets = (store: GlobalStateInterface): Array<TweetInterface> =>
     return store.tweets.tweets;
 };
 
-export const getUser = (store: GlobalStateInterface): UserInterface => {
+export const getActiveUser = (store: GlobalStateInterface): UserInterface => {
     return store.user.activeUser;
 };
 

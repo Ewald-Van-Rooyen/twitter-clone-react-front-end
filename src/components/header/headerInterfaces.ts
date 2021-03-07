@@ -1,3 +1,5 @@
 export interface HeaderPropsInterface {
-    logoutClickCallback: () => void;
+    onLogoutClickCallback: () => void;
+    onUserClickCallback: () => void;
+    onHomeClickCallback: () => void;
 }
