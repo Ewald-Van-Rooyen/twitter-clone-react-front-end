@@ -17,12 +17,10 @@
     opacity: 0.5; }
   100% {
     opacity: 1; } }
-* {
-  font-size: 12px; }
-
 .main {
   position: relative;
-  margin-top: 30vh; }
+  margin-top: 30vh;
+  font-size: 12px; }
 
 .login-fieldset-field, .login-fieldset-submit {
   min-width: 250px;

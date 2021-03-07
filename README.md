@@ -40,3 +40,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 * [Formik](https://formik.org/) Form handling
 * [Yup](https://www.npmjs.com/package/yup) Form schema validation
 * [json-server](https://www.npmjs.com/package/json-server)
+* [Bootstrap Icons](https://icons.getbootstrap.com/)

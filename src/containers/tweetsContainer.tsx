@@ -49,7 +49,7 @@ const TweetsContainer = () => {
         if (usersDetailsStatus === StatusEnum.IDLE) {
             dispatch(UserDetailsService.fetchUsersDetails);
         }
-    }, [dispatch]);
+    }, []);
 
     // Hides the tweets if their information is still being loaded
     return (

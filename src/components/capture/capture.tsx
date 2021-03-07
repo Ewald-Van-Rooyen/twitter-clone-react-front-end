@@ -60,13 +60,13 @@ const Capture = () => {
         if (currentTweetValue.length < maxCharacterLength) {
             setTweet(event.target.value);
         }
-
     };
 
-    return (<div className="container">
-
+    return (
         <div className="horizontal-container">
-            <img src={`${activeUser.profilePic}`} alt="" className="avatar"/>
+            <div className="display-flex">
+                <img src={`${activeUser.profilePic}`} alt="" className="avatar"/>
+            </div>
             <form onSubmit={handleSubmit} className={"tweet-form"}>
                 <div className="capture-input-container">
                         <textarea value={tweet} onChange={handleChange} className="capture-input"
@@ -79,8 +79,7 @@ const Capture = () => {
                 </div>
             </form>
         </div>
-
-    </div>);
+    );
 };
 
 export default Capture;

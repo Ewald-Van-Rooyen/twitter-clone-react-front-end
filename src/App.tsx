@@ -14,15 +14,19 @@ function App() {
     const [showLoginScreen, setShowLoginScreen] = useState(true);
     const [showFeedScreen, setShowFeedScreen] = useState(false);
 
-    // TODO Add logout functionality
     const onSubmitClickCallback = () => {
         setShowLoginScreen(false);
         setShowFeedScreen(true);
     };
 
+    const onLogoutClickCallback = () => {
+        setShowLoginScreen(true);
+        setShowFeedScreen(false);
+    };
+
     return (
         <>
-            {showFeedScreen && <Feed/>}
+            {showFeedScreen && <Feed onLogoutClickCallback={onLogoutClickCallback}/>}
             {showLoginScreen && <Login onSubmitClickCallback={onSubmitClickCallback}/>}
         </>
     );

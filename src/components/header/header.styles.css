@@ -1,0 +1,50 @@
+.header-container {
+  background-color: white;
+  max-height: 100%;
+  min-height: 70px;
+  padding-left: 30px;
+  padding-top: 10px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -moz-border-radius-bottomright: 15px;
+  margin-bottom: 25px; }
+
+.header-h3-item:hover {
+  text-decoration: underline;
+  cursor: pointer; }
+
+.header-container h4 {
+  margin-right: 20px; }
+
+.svg-left-margin {
+  margin-right: 15px;
+  margin-top: 18px; }
+
+.twitter-icon {
+  margin-left: auto;
+  margin-top: 10px;
+  margin-right: 30px;
+  fill: #55acee; }
+
+.twitter-icon:hover {
+  animation: fly 1.5s ease-in-out infinite; }
+@keyframes fly {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(5px); }
+  100% {
+    transform: translateY(0); } }
+@media screen and (max-width: 400px) {
+  h4 {
+    font-size: 14px; }
+
+  .twitter-icon {
+    width: 25px;
+    height: 25px; }
+
+  .header-container {
+    padding-left: 15px; } }
+
+/*# sourceMappingURL=header.styles.css.map */

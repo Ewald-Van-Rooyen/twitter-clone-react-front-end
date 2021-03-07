@@ -61,16 +61,12 @@ $animation-time: 0.5s;
   }
 }
 
-// reset
-* {
-  font-size: $default-font-size;
-}
 
 // styles
 .main {
   @include position();
   margin-top: 30vh;
-
+  font-size: $default-font-size;
 }
 
 %login-item {

@@ -60,8 +60,8 @@ const Tweet = (props: TweetInterface) => {
     };
 
     return (
-        <div className="container">
-            <div className="horizontal-container">
+        <div className="horizontal-container display-rows">
+            <div className="display-flex">
                 <img src={`${user.profilePic}`} alt="" className="avatar"/>
                 <div className="tweet-header-info">
                     {details.firstName + details.lastName}
