@@ -1,4 +1,4 @@
-import {GlobalStateInterface} from "../interfaces/globalStateInterface";
+import {GlobalStateInterface, StatusEnum} from "../interfaces/globalStateInterface";
 import {UserInterface} from "../interfaces/userInterface";
 import {TweetInterface} from "../interfaces/tweetInterface";
 import {UserDetailInterface} from "../interfaces/userDetailInterface";
@@ -26,5 +26,21 @@ export const getUserDetailsById = (store: GlobalStateInterface, id: number): Use
     return store.userDetails.userDetails.filter((detail) => {
         return detail.id === id;
     })[0];
+};
+
+export const getGlobalStatus = (state: GlobalStateInterface): StatusEnum => {
+    return state.global.status;
+};
+
+export const getTweetsStatus = (state: GlobalStateInterface): StatusEnum => {
+    return state.global.tweetsStatus;
+};
+
+export const getUsersStatus = (state: GlobalStateInterface): StatusEnum => {
+    return state.global.usersStatus;
+};
+
+export const getUsersDetailsStatus = (state: GlobalStateInterface): StatusEnum => {
+    return state.global.usersDetailsStatus;
 };
 

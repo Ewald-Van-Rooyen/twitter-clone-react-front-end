@@ -1,25 +1,11 @@
 {
   "tweets": [
     {
-      "id": 0,
-      "tweet": "duis do in ea veniam nulla excepteur voluptate esse fugiat quis mollit occaecat Lorem adipisicing in sit ad aute occaecat",
-      "date": "2015-01-17",
-      "claps": 47,
-      "userId": 1
-    },
-    {
-      "id": 1,
-      "tweet": "duis labore tempor eiusmod culpa in ex nostrud magna id qui fugiat ad commodo deserunt occaecat incididunt est proident deserunt",
-      "date": "2016-02-20",
-      "claps": 30,
-      "userId": 1
-    },
-    {
       "id": 2,
+      "claps": 18,
       "tweet": "minim ut consequat occaecat cupidatat minim Lorem occaecat amet aliqua qui labore dolor consectetur sunt commodo minim mollit exercitation ea",
-      "date": "2015-05-06",
-      "claps": 11,
-      "userId": 2
+      "userId": 2,
+      "date": "2015-05-06"
     },
     {
       "id": 3,
@@ -29,25 +15,18 @@
       "userId": 3
     },
     {
-      "id": 4,
-      "tweet": "voluptate esse est cupidatat est duis dolor ea quis eiusmod sint deserunt amet quis consectetur quis eiusmod consequat aute minim",
-      "date": "2019-02-28",
-      "claps": 77,
-      "userId": 1
-    },
-    {
       "id": 5,
+      "claps": 89,
       "tweet": "mollit ut ullamco irure id et esse sit sunt tempor cillum adipisicing dolore pariatur adipisicing culpa laboris dolore reprehenderit quis",
-      "date": "2017-07-25",
-      "claps": 87,
-      "userId": 2
+      "userId": 2,
+      "date": "2017-07-25"
     },
     {
       "id": 6,
+      "claps": 80,
       "tweet": "eu ut velit fugiat cillum ut do sunt laboris et est dolore exercitation est qui ex velit est dolore mollit",
-      "date": "2015-01-03",
-      "claps": 77,
-      "userId": 4
+      "userId": 4,
+      "date": "2015-01-03"
     },
     {
       "id": 7,
@@ -993,6 +972,27 @@
       "date": "2014-02-13",
       "claps": 83,
       "userId": 1
+    },
+    {
+      "tweet": "Hello",
+      "claps": 0,
+      "date": "2021-3-7",
+      "userId": 1,
+      "id": 142
+    },
+    {
+      "tweet": "Bru",
+      "claps": 0,
+      "date": "2021-3-7",
+      "userId": 1,
+      "id": 143
+    },
+    {
+      "tweet": "Mehsh",
+      "claps": 0,
+      "date": "2021-3-7",
+      "userId": 1,
+      "id": 144
     }
   ],
   "users": [

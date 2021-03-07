@@ -12,7 +12,7 @@ const tweetReducer = (state: TweetsGlobalStateInterface = initialState, action: 
                 ...state,
                 tweets: action.payload
             };
-        case TWEETS_ACTIONS.ADD_TWEET:
+        case TWEETS_ACTIONS.POST_TWEET:
             return {
                 ...state,
                 tweets: [...state.tweets, action.payload]

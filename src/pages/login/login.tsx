@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {useFormik} from "formik";
 
 import {LoginInterface, LoginPropsInterface} from "./loginInterfaces";
@@ -11,8 +11,6 @@ import "./login.styles.scss";
 import {UserInterface} from "../../interfaces/userInterface";
 import {useDispatch} from "react-redux";
 import {setActiveUser} from "../../redux/actions/user/userActions";
-
-const authenticationService = new AuthenticationService();
 
 /**
  * Login uses Formik and Yup to validate the login form
@@ -39,7 +37,7 @@ const Login = (props: LoginPropsInterface) => {
             setShowLoader(true);
 
             // Simulated user authentication
-            authenticationService.mathUsers(values.username)
+            AuthenticationService.mathUsers(values.username)
                 .then((user: UserInterface) => {
                     if (user) {
                         dispatch(setActiveUser(user));

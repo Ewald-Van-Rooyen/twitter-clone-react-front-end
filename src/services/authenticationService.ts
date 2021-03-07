@@ -9,15 +9,13 @@ class AuthenticationService {
      * Assuming username's are unique
      * @param username
      */
-    async mathUsers(username: string): Promise<UserInterface> {
+    static async mathUsers(username: string): Promise<UserInterface> {
         const loginUrl = `${process.env.REACT_APP_BASE_APIE_URL}users`;
         const {data} = await axios.get<Array<UserInterface>>(loginUrl);
 
         return data.filter((user) => {
             return user.username === username;
         })[0];
-
-
     }
 }
 

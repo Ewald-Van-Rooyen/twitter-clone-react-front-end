@@ -10,6 +10,7 @@ const userDetailsReducer = (state: UserDetailsGlobalStateInterface = initialStat
     switch (action.type) {
         case USERS_DETAILS_ACTIONS.FETCH_USERS_DETAILS:
             return {
+                ...state,
                 userDetails: action.payload
             };
         default :

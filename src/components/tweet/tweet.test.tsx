@@ -14,10 +14,11 @@ describe("Tweet component tests", () => {
 
     beforeAll(() => {
         testRenderer = TestRenderer.create(
-            <Tweet fullname={fullname} username={username}
-                   profilePic={profilePic} date={date}
+            <Tweet date={date}
                    tweet={tweet}
-                   claps={claps}/>
+                   claps={claps}
+                   id={1}
+                   userId={2}/>
         );
     });
 

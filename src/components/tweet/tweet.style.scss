@@ -1,6 +1,7 @@
 $standard-spacing: 15px;
 $double-spacing: 30px;
 $twitter-grey: #e6ecf0;
+$twitter-blue: #1da1f2;
 
 .tweet-header-info {
   font-weight: bold;
@@ -30,12 +31,11 @@ $twitter-grey: #e6ecf0;
 
 .tweet-icons div {
   display: flex;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .tweet-icons div svg {
   color: #657786;
-  margin-right: 10px;
 }
 
 @media screen and (max-width: 430px) {
@@ -58,4 +58,14 @@ $twitter-grey: #e6ecf0;
   .tweet-icons div {
     margin-right: 10px;
   }
+}
+
+.tweet-likes-icon-svg:hover {
+   cursor: pointer;
+  fill: $twitter-blue;
+}
+
+.tweet-delete-icon-svg:hover {
+  cursor: pointer;
+  fill: red;
 }
