@@ -1,5 +1,5 @@
 import {UserDetailsGlobalStateInterface} from "../../interfaces/globalStateInterface";
-import {USERS_DETAILS_ACTIONS} from "../actions/user-details/userDetailsConstants";
+import {USERS_DETAILS_ACTIONS} from "../actions/userDetailsConstants";
 
 const initialState: UserDetailsGlobalStateInterface = {
     userDetails: []

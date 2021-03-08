@@ -1,8 +1,7 @@
 import {StateInterface, StatusEnum} from "../../interfaces/globalStateInterface";
-import {STATE_ACTIONS} from "../actions/state/stateConstants";
+import {STATE_ACTIONS} from "../actions/stateConstants";
 
 const initialState: StateInterface = {
-    status: StatusEnum.IDLE,
     tweetsStatus: StatusEnum.IDLE,
     usersStatus: StatusEnum.IDLE,
     usersDetailsStatus: StatusEnum.IDLE
@@ -11,11 +10,6 @@ const initialState: StateInterface = {
 
 const globalStateReducer = (state: StateInterface = initialState, action: any) => {
     switch (action.type) {
-        case STATE_ACTIONS.SET_STATUS:
-            return {
-                ...state,
-                status: action.payload
-            };
         case STATE_ACTIONS.SET_TWEETS_STATUS:
             return {
                 ...state,

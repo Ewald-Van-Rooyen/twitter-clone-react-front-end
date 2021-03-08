@@ -1,8 +1,8 @@
 import axios from "axios";
 import {Dispatch} from "redux";
-import {TWEETS_ACTIONS} from "../redux/actions/tweet/tweetConstants";
+import {TWEETS_ACTIONS} from "../redux/actions/tweetConstants";
 import {TweetPostInterface, TweetPutInterface} from "../interfaces/tweetInterface";
-import {STATE_ACTIONS} from "../redux/actions/state/stateConstants";
+import {STATE_ACTIONS} from "../redux/actions/stateConstants";
 import {StatusEnum} from "../interfaces/globalStateInterface";
 
 class TweetService {

@@ -1,7 +1,7 @@
 import {Dispatch} from "redux";
 import axios from "axios";
-import {USER_ACTIONS} from "../redux/actions/user/userConstants";
-import {STATE_ACTIONS} from "../redux/actions/state/stateConstants";
+import {USER_ACTIONS} from "../redux/actions/userConstants";
+import {STATE_ACTIONS} from "../redux/actions/stateConstants";
 import {StatusEnum} from "../interfaces/globalStateInterface";
 
 class UserService {

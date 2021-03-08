@@ -29,7 +29,6 @@ export interface UserDetailsGlobalStateInterface {
 }
 
 export interface StateInterface {
-    status: StatusEnum;
     tweetsStatus: StatusEnum;
     usersStatus: StatusEnum;
     usersDetailsStatus: StatusEnum;

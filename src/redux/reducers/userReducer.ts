@@ -1,5 +1,5 @@
 import {UserGlobalStateInterface} from "../../interfaces/globalStateInterface";
-import {USER_ACTIONS} from "../actions/user/userConstants";
+import {USER_ACTIONS} from "../actions/userConstants";
 
 const initialState: UserGlobalStateInterface = {
     activeUser: {id: 0, username: "", role: "", profilePic: "", usersDetailsId: 0},

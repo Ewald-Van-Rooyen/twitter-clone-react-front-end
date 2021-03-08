@@ -10,7 +10,7 @@ import Loader from "../../components/loader/loader";
 import "./login.styles.scss";
 import {UserInterface} from "../../interfaces/userInterface";
 import {useDispatch} from "react-redux";
-import {setActiveUser} from "../../redux/actions/user/userActions";
+import {setActiveUser} from "../../redux/actions/userActions";
 
 /**
  * Login uses Formik and Yup to validate the login form

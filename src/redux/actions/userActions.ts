@@ -1,4 +1,4 @@
-import {UserInterface} from "../../../interfaces/userInterface";
+import {UserInterface} from "../../interfaces/userInterface";
 import {USER_ACTIONS} from "./userConstants";
 
 export const setActiveUser = (user: UserInterface) => ({

@@ -7,12 +7,6 @@ export const getTweets = (store: GlobalStateInterface): Array<TweetInterface> =>
     return store.tweets.tweets;
 };
 
-export const getTweetsByUserId = (store: GlobalStateInterface, userId: number): Array<TweetInterface> => {
-    return store.tweets.tweets.filter((tweet) => {
-        return tweet.userId = userId;
-    });
-};
-
 export const getActiveUser = (store: GlobalStateInterface): UserInterface => {
     return store.user.activeUser;
 };
@@ -24,18 +18,10 @@ export const getUserById = (store: GlobalStateInterface, id: number): UserInterf
     })[0];
 };
 
-export const getUsersDetails = (store: GlobalStateInterface): Array<UserDetailInterface> => {
-    return store.userDetails.userDetails
-};
-
 export const getUserDetailsById = (store: GlobalStateInterface, id: number): UserDetailInterface => {
     return store.userDetails.userDetails.filter((detail) => {
         return detail.id === id;
     })[0];
-};
-
-export const getGlobalStatus = (state: GlobalStateInterface): StatusEnum => {
-    return state.global.status;
 };
 
 export const getTweetsStatus = (state: GlobalStateInterface): StatusEnum => {

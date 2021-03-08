@@ -1,7 +1,7 @@
 import axios from "axios";
-import {USERS_DETAILS_ACTIONS} from "../redux/actions/user-details/userDetailsConstants";
+import {USERS_DETAILS_ACTIONS} from "../redux/actions/userDetailsConstants";
 import {Dispatch} from "redux";
-import {STATE_ACTIONS} from "../redux/actions/state/stateConstants";
+import {STATE_ACTIONS} from "../redux/actions/stateConstants";
 import {StatusEnum} from "../interfaces/globalStateInterface";
 
 class UserDetailsService {

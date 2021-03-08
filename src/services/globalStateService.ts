@@ -2,7 +2,7 @@ import {Dispatch} from "redux";
 import TweetService from "./tweetService";
 import UserService from "./userService";
 import UserDetailsService from "./userDetailsService";
-import {STATE_ACTIONS} from "../redux/actions/state/stateConstants";
+import {STATE_ACTIONS} from "../redux/actions/stateConstants";
 import {StatusEnum} from "../interfaces/globalStateInterface";
 
 class GlobalStateService {

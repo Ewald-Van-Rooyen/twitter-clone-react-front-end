@@ -1,5 +1,5 @@
 import {TweetsGlobalStateInterface} from "../../interfaces/globalStateInterface";
-import {TWEETS_ACTIONS} from "../actions/tweet/tweetConstants";
+import {TWEETS_ACTIONS} from "../actions/tweetConstants";
 
 const initialState: TweetsGlobalStateInterface = {
     tweets: []
