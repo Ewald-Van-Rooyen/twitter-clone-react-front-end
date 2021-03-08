@@ -61,7 +61,7 @@ const UserDetails = () => {
                     <img className="user-icon" src={activeUser.profilePic} alt="User profile"/>
                 </div>
                 <Details username={activeUser.username}
-                         fullName={`${activeUserDetails.firstName} ${activeUserDetails.lastName}`}
+                         fullName={`${activeUserDetails.firstName}  ${activeUserDetails.lastName}`}
                          birthday={activeUserDetails.birthday}
                          tweetsPerDay={(tweetsPerDay / 10) || 0}
                 />

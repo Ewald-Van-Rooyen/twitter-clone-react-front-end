@@ -2,45 +2,45 @@
 
 exports[`Capture component tests should render the Capture component 1`] = `
 <div
-  className="container"
+  className="horizontal-container capture-container sticky"
 >
   <div
-    className="horizontal-container"
+    className="display-flex"
   >
     <img
       alt=""
       className="avatar"
-      src="https://avatarfiles.alphacoders.com/174/174225.jpg"
+      src="undefined"
     />
-    <form
-      className="tweet-form"
-      onSubmit={[Function]}
-    >
-      <div
-        className="capture-input-container"
-      >
-        <textarea
-          className="capture-input"
-          onChange={[Function]}
-          placeholder="What's happening?"
-          value=""
-        />
-      </div>
-      <div
-        className="tweet-button-container"
-      >
-        <button
-          className="tweet-button twitter-blue-background"
-          type="submit"
-        >
-          <span
-            className="text"
-          >
-            Tweet
-          </span>
-        </button>
-      </div>
-    </form>
   </div>
+  <form
+    className="tweet-form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="capture-input-container"
+    >
+      <textarea
+        className="capture-input"
+        onChange={[Function]}
+        placeholder="What's happening?"
+        value=""
+      />
+    </div>
+    <div
+      className="tweet-button-container"
+    >
+      <button
+        className="tweet-button twitter-blue-background"
+        type="submit"
+      >
+        <span
+          className="text"
+        >
+          Tweet
+        </span>
+      </button>
+    </div>
+  </form>
 </div>
 `;

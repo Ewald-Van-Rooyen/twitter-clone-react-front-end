@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for the Details component should render the Details screen 1`] = `
+<div
+  className="user-container"
+>
+  <div
+    className="display-flex info-line-item"
+  >
+    <label
+      className="label-main"
+    >
+      Username:
+    </label>
+    <label
+      className="label-info twitter-color"
+    >
+      @Ewald42
+    </label>
+  </div>
+  <div
+    className="display-flex info-line-item"
+  >
+    <label
+      className="label-main"
+    >
+      Fullname:
+    </label>
+    <label
+      className="label-info"
+    >
+      EwaldVan Rooyen
+    </label>
+  </div>
+  <div
+    className="display-flex info-line-item"
+  >
+    <label
+      className="label-main"
+    >
+      Birthday:
+    </label>
+    <label
+      className="label-info"
+    >
+      1989-08-04
+    </label>
+  </div>
+  <div
+    className="display-flex info-line-item"
+  >
+    <label
+      className="label-main"
+    >
+      Tweets per day over the last 10 days:
+    </label>
+    <label
+      className="label-info"
+    >
+      5
+    </label>
+  </div>
+</div>
+`;

@@ -1,16 +1,22 @@
-import TestRenderer, {ReactTestRenderer} from "react-test-renderer";
-
 import React from "react";
+import * as reactRedux from "react-redux";
+import TestRenderer, {ReactTestRenderer} from "react-test-renderer";
+import {fireEvent, render, waitFor} from "@testing-library/react";
+
 import LoginPage from "./loginPage";
-import {fireEvent, render, screen, wait, waitFor} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 
-let container: any;
-let testRenderer: ReactTestRenderer;
+describe("test suite", () => {
+    const useSelectorMock = jest.spyOn(reactRedux, "useSelector");
+    const useDispatchMock = jest.spyOn(reactRedux, "useDispatch");
+    let testRenderer: ReactTestRenderer;
 
-describe("Login component tests", () => {
+    beforeEach(() => {
+        useSelectorMock.mockClear();
+        useDispatchMock.mockClear();
+    });
 
-    it("should render the Login component", () => {
+    it("should render the login", () => {
+
         testRenderer = TestRenderer.create(
             <LoginPage onSubmitClickCallback={() => {
             }}/>
@@ -18,10 +24,9 @@ describe("Login component tests", () => {
         expect(testRenderer).toMatchSnapshot();
     });
 
-    test('rendering and submitting a basic Formik form failing vallidation', async () => {
+    it("rendering and submitting a basic Formik form failing validation", async () => {
         const {container} = render(<LoginPage onSubmitClickCallback={() => {
         }}/>);
-
 
         const username = container.querySelector('input[name="username"]');
         const password = container.querySelector('input[name="password"]');
@@ -54,10 +59,9 @@ describe("Login component tests", () => {
         expect(usernameErrorMessage.innerHTML).toBe("Username is required");
     });
 
-    test("rendering and submitting a basic Formik form failing password length", async () => {
+    it("rendering and submitting a basic Formik form failing password length", async () => {
         const {container} = render(<LoginPage onSubmitClickCallback={() => {
         }}/>);
-
 
         const username = container.querySelector('input[name="username"]');
         const password = container.querySelector('input[name="password"]');
@@ -86,5 +90,4 @@ describe("Login component tests", () => {
         const passwordErrorMessage = container.querySelector("#passwordErrorMessage");
         expect(passwordErrorMessage.innerHTML).toBe("Password should be of minimum 4 characters length");
     });
-
 });
