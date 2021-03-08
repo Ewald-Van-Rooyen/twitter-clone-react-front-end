@@ -61,11 +61,10 @@ $animation-time: 0.5s;
   }
 }
 
-
 // styles
 .main {
   @include position();
-  margin-top: 30vh;
+  margin-top: 20vh;
   font-size: $default-font-size;
 }
 

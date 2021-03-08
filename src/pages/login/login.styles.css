@@ -19,7 +19,7 @@
     opacity: 1; } }
 .main {
   position: relative;
-  margin-top: 30vh;
+  margin-top: 20vh;
   font-size: 12px; }
 
 .login-fieldset-field, .login-fieldset-submit {
@@ -88,8 +88,7 @@
   right: 0;
   top: auto;
   height: 6em;
-  width: 6em;
-}
+  width: 6em; }
 
 .login-fieldset-submit {
   font-weight: bold;

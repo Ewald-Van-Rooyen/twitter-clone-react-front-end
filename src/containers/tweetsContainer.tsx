@@ -11,6 +11,7 @@ import UserDetailsService from "../services/userDetailsService";
 import Loader from "../components/loader/loader";
 
 // Amount of tweets loaded/displayed at a time
+// TODO move to own component for any large volumes
 const tweetsPerPage = 5;
 
 /**
@@ -29,8 +30,6 @@ const TweetsContainer = () => {
     const usersDetailsStatus: StatusEnum = useSelector(getUsersDetailsStatus);
 
     const dispatch = useDispatch();
-
-    const tweetsContainer = useRef(null);
 
     const indexOfLastTweet = page * tweetsPerPage;
     const currentPageTweets = tweets.slice(0, indexOfLastTweet);
@@ -85,7 +84,7 @@ const TweetsContainer = () => {
     return (
         <>
             {shouldShowFeed() && (
-                <div ref={tweetsContainer} className="tweets-container" onScroll={handleScroll}>
+                <div className="tweets-container" onScroll={handleScroll}>
                     {currentPageTweetsElements}
                 </div>)}
             {!shouldShowFeed() && <Loader/>}

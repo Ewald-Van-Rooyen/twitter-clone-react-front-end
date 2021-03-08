@@ -60,14 +60,6 @@ const LoginPage = (props: LoginPropsInterface) => {
             <main className="main">
                 <div className="button-twitter"/>
                 <form onSubmit={formik.handleSubmit} className="login">
-                    <svg className="login-sides">
-                        <line className="top-right first" x1="50%" x2="100%" y1="0" y2="0"/>
-                        <line className="top-left first" x1="50%" x2="0" y1="0" y2="0"/>
-                        <line className="right second" x1="100%" x2="100%" y1="0" y2="100%"/>
-                        <line className="left second" x1="0" x2="0" y1="0" y2="100%"/>
-                        <line className="bottom-left third" x1="0" x2="50%" y1="100%" y2="100%"/>
-                        <line className="bottom-right third" x1="100%" x2="50%" y1="100%" y2="100%"/>
-                    </svg>
                     <fieldset className="login-fieldset">
                         <input type="text"
                                value={formik.values.username}
