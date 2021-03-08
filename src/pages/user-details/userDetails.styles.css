@@ -3,29 +3,27 @@
   border: 3px solid #fff;
   border-radius: 50%;
   position: absolute;
-  top: 23%;
+  top: 7%;
   right: 38%;
   height: 9em;
-  width: 9em;
-}
+  width: 9em; }
 
 .tweets-container-details {
   margin-top: 15vh;
-}
+  height: 50vh; }
 
 .user-main {
   position: relative;
   margin-top: 10vh;
-  font-size: 12px;
-}
+  font-size: 12px; }
 
 @media screen and (max-width: 430px) {
   .user-icon {
-    right: 35%;
-  }
+    right: 35%; }
 
   .tweets-container-details {
-    margin-top: 15vh;
-  }
-}
+    margin-top: 15vh; } }
+.top-margin {
+  margin-top: 100px; }
 
+/*# sourceMappingURL=userDetails.styles.css.map */

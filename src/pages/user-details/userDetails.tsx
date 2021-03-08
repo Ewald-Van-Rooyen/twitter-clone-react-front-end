@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import "./userPage.styles.scss";
+import "./userDetails.styles.scss";
 import Details from "../../components/details/details";
 import {useSelector} from "react-redux";
 import {getActiveUser, getTweets, getUserDetailsById} from "../../redux/selectors";
@@ -56,7 +56,7 @@ const UserDetails = () => {
 
     return (
         <main className="user-main">
-            <div className="sticky">
+            <div className="sticky top-margin">
                 <div>
                     <img className="user-icon" src={activeUser.profilePic} alt="User profile"/>
                 </div>
