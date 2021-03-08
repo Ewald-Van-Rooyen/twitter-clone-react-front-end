@@ -16,13 +16,14 @@ $twitter-color: #55acee;
 .header-h3-item:hover {
   text-decoration: underline;
   cursor: pointer;
+  color: $twitter-color;
 }
 
 .header-container h4 {
   margin-right: 20px;
 }
 
-.svg-left-margin {
+.svg-align {
   margin-right: 15px;
   margin-top: 18px;
 }
@@ -65,4 +66,15 @@ $twitter-color: #55acee;
   .header-container {
     padding-left: 15px;
   }
+
+  .header-h3-item {
+    display: none;
+  }
+
+  .svg-align {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 18px;
+  }
+
 }

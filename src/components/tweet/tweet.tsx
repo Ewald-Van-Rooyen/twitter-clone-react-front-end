@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 
-import "./tweet.style.scss";
 import {useDispatch, useSelector} from "react-redux";
-import {getActiveUser, getUserById, getUserDetailsById} from "../../redux/selector";
+import {getActiveUser, getUserById, getUserDetailsById} from "../../redux/selectors";
 import {TweetInterface} from "../../interfaces/tweetInterface";
 import {GlobalStateInterface} from "../../interfaces/globalStateInterface";
 import {UserInterface} from "../../interfaces/userInterface";
 import TweetService from "../../services/tweetService";
 import Loader from "../loader/loader";
+
+import "./tweet.style.scss";
 
 /**
  * Tweet component that allows for a user to like someone elses tweet
@@ -16,7 +17,7 @@ import Loader from "../loader/loader";
  * @constructor
  */
 const Tweet = (props: TweetInterface) => {
-    const [showLoader, setShowLoader] = useState(false);
+    const [showLoader, setShowLoader] = useState(false)
     const activeUser: UserInterface = useSelector(getActiveUser);
     const user = useSelector((state: GlobalStateInterface) => getUserById(state, props.userId));
     const details = useSelector((state: GlobalStateInterface) => getUserDetailsById(state, user.usersDetailsId));

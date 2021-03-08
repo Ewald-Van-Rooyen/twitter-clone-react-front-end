@@ -25,7 +25,7 @@
 .tweet-icons div svg {
   color: #657786; }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 400px) {
   .tweet-header {
     flex-direction: column; }
 

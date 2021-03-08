@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Capture from "../components/capture/capture";
 import TweetsContainer from "../containers/tweetsContainer";
 import Header from "../components/header/header";
-import UserDetails from "./user/userDetails";
+import UserDetails from "./user-details/userDetails";
 
 interface FeedPropsInterface {
     onLogoutClickCallback: () => void;

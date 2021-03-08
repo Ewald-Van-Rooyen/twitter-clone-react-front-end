@@ -7,6 +7,12 @@ export const getTweets = (store: GlobalStateInterface): Array<TweetInterface> =>
     return store.tweets.tweets;
 };
 
+export const getTweetsByUserId = (store: GlobalStateInterface, userId: number): Array<TweetInterface> => {
+    return store.tweets.tweets.filter((tweet) => {
+        return tweet.userId = userId;
+    });
+};
+
 export const getActiveUser = (store: GlobalStateInterface): UserInterface => {
     return store.user.activeUser;
 };

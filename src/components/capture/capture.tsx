@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 import {useDispatch, useSelector} from "react-redux";
-import {getActiveUser} from "../../redux/selector";
+import {getActiveUser} from "../../redux/selectors";
 import {UserInterface} from "../../interfaces/userInterface";
 
 import "./capture.style.scss";

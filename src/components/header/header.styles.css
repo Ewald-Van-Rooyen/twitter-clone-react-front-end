@@ -12,12 +12,13 @@
 
 .header-h3-item:hover {
   text-decoration: underline;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #55acee; }
 
 .header-container h4 {
   margin-right: 20px; }
 
-.svg-left-margin {
+.svg-align {
   margin-right: 15px;
   margin-top: 18px; }
 
@@ -45,6 +46,14 @@
     height: 25px; }
 
   .header-container {
-    padding-left: 15px; } }
+    padding-left: 15px; }
+
+  .header-h3-item {
+    display: none; }
+
+  .svg-align {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 18px; } }
 
 /*# sourceMappingURL=header.styles.css.map */

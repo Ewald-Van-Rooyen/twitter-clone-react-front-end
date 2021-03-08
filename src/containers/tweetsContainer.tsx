@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {TweetInterface} from "../interfaces/tweetInterface";
 
 import {useDispatch, useSelector} from "react-redux";
-import {getTweets, getTweetsStatus, getUsersDetailsStatus, getUsersStatus} from "../redux/selector";
+import {getTweets, getTweetsStatus, getUsersDetailsStatus, getUsersStatus} from "../redux/selectors";
 import Tweet from "../components/tweet/tweet";
 import {StatusEnum} from "../interfaces/globalStateInterface";
 import TweetService from "../services/tweetService";
@@ -18,11 +18,12 @@ import Loader from "../components/loader/loader";
  */
 const TweetsContainer = () => {
     const tweets = useSelector(getTweets);
-    const dispatch = useDispatch();
-
+    debugger;
     const tweetsStatus: StatusEnum = useSelector(getTweetsStatus);
     const usersStatus: StatusEnum = useSelector(getUsersStatus);
     const usersDetailsStatus: StatusEnum = useSelector(getUsersDetailsStatus);
+
+    const dispatch = useDispatch();
 
     /**
      * Tweets requires all three models to construct a Tweet component
@@ -55,7 +56,7 @@ const TweetsContainer = () => {
     return (
         <>
             {shouldShowFeed() && tweets && tweets.map((tweet: TweetInterface) => {
-                return (<Tweet key={tweet.id}
+                return (<Tweet key={`${tweet.id}${tweet.userId}`}
                                id={tweet.id}
                                userId={tweet.userId}
                                date={tweet.date}

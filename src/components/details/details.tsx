@@ -1,5 +1,5 @@
 import React from "react";
-import "./details.scss";
+import "./details.styles.scss";
 
 interface DetailsPropsInterface {
     username: string;
