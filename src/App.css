@@ -1,7 +1,8 @@
 body {
   background: #e6ecf0;
   font-family: Roboto, sans-serif;
-  margin: 0; }
+  margin: 0;
+  height: 100vh; }
 
 .twitter-color {
   color: #1da1f2; }
@@ -10,7 +11,7 @@ img {
   max-width: 100%; }
 
 .container {
-  min-height: 100px;
+  height: 100vh;
   max-width: 490px;
   margin: 0 auto 0;
   border-radius: 15px;
@@ -44,8 +45,28 @@ img {
 .display-flex {
   display: flex; }
 
-@media screen and (max-width: 400px) {
+.sticky {
+  position: fixed;
+  top: 0; }
+
+.tweets-container {
+  top: 320px;
+  height: 65vh;
+  position: relative;
+  overflow: auto;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
+.tweets-container::-webkit-scrollbar {
+  display: none; }
+
+@media screen and (max-width: 430px) {
   .horizontal-container {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .tweets-container {
+    height: 50vh; } }
 
 /*# sourceMappingURL=App.css.map */

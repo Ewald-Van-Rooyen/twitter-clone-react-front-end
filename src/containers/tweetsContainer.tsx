@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {TweetInterface} from "../interfaces/tweetInterface";
 
 import {useDispatch, useSelector} from "react-redux";
@@ -10,6 +10,9 @@ import UserService from "../services/userService";
 import UserDetailsService from "../services/userDetailsService";
 import Loader from "../components/loader/loader";
 
+// Amount of tweets loaded/displayed at a time
+const tweetsPerPage = 5;
+
 /**
  * Generates the users tweet feed
  * from the back end information of users,tweets and usersDetails
@@ -17,13 +20,38 @@ import Loader from "../components/loader/loader";
  * @constructor
  */
 const TweetsContainer = () => {
+    const [page, setPage] = useState(1);
+
     const tweets = useSelector(getTweets);
-    debugger;
+
     const tweetsStatus: StatusEnum = useSelector(getTweetsStatus);
     const usersStatus: StatusEnum = useSelector(getUsersStatus);
     const usersDetailsStatus: StatusEnum = useSelector(getUsersDetailsStatus);
 
     const dispatch = useDispatch();
+
+    const tweetsContainer = useRef(null);
+
+    const indexOfLastTweet = page * tweetsPerPage;
+    const currentPageTweets = tweets.slice(0, indexOfLastTweet);
+
+    // Increases the amount of tweets being displayed on page scroll down
+    const handleScroll = (event: React.UIEvent<HTMLElement>) => {
+        const bottom = event.currentTarget.scrollHeight - event.currentTarget.scrollTop === event.currentTarget.clientHeight;
+        if (bottom) {
+            const nextPage = page + 1;
+            setPage(nextPage);
+        }
+    };
+
+    const currentPageTweetsElements = currentPageTweets.map((tweet: TweetInterface) => {
+        return (<Tweet key={`${tweet.id}${tweet.userId}`}
+                       id={tweet.id}
+                       userId={tweet.userId}
+                       date={tweet.date}
+                       tweet={tweet.tweet}
+                       claps={tweet.claps}/>);
+    });
 
     /**
      * Tweets requires all three models to construct a Tweet component
@@ -52,17 +80,14 @@ const TweetsContainer = () => {
         }
     }, []);
 
+
     // Hides the tweets if their information is still being loaded
     return (
         <>
-            {shouldShowFeed() && tweets && tweets.map((tweet: TweetInterface) => {
-                return (<Tweet key={`${tweet.id}${tweet.userId}`}
-                               id={tweet.id}
-                               userId={tweet.userId}
-                               date={tweet.date}
-                               tweet={tweet.tweet}
-                               claps={tweet.claps}/>);
-            })}
+            {shouldShowFeed() && (
+                <div ref={tweetsContainer} className="tweets-container" onScroll={handleScroll}>
+                    {currentPageTweetsElements}
+                </div>)}
             {!shouldShowFeed() && <Loader/>}
         </>
     );

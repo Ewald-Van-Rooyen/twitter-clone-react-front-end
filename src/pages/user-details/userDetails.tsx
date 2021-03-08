@@ -26,7 +26,7 @@ const UserDetails = () => {
 
     return (
         <main className="user-main">
-            <div>
+            <div >
                 <img className="user-icon" src={activeUser.profilePic} alt="User profile"/>
             </div>
             <Details username={activeUser.username}

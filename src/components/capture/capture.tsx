@@ -63,7 +63,7 @@ const Capture = () => {
     };
 
     return (
-        <div className="horizontal-container">
+        <div className="horizontal-container capture-container sticky">
             <div className="display-flex">
                 <img src={`${activeUser.profilePic}`} alt="" className="avatar"/>
             </div>

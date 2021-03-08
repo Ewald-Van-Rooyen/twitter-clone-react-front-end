@@ -4,9 +4,8 @@ import {HeaderPropsInterface} from "./headerInterfaces";
 
 const Header = (props: HeaderPropsInterface) => {
 
-    // TODO only display icons on mobile
     return (<>
-        <div className="header-container ">
+        <div className="header-container sticky">
             <nav>
                 <div className="display-flex">
                     <div onClick={props.onHomeClickCallback} className="display-flex home-icon">

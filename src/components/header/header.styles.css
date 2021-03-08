@@ -8,7 +8,8 @@
   border-bottom-left-radius: 15px;
   -moz-border-radius-bottomleft: 15px;
   -moz-border-radius-bottomright: 15px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  width: calc(24%); }
 
 .header-h3-item:hover {
   text-decoration: underline;
@@ -37,13 +38,14 @@
     transform: translateY(5px); }
   100% {
     transform: translateY(0); } }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   h4 {
     font-size: 14px; }
 
   .twitter-icon {
     width: 25px;
-    height: 25px; }
+    height: 25px;
+    margin-right: 20px; }
 
   .header-container {
     padding-left: 15px; }
@@ -52,8 +54,11 @@
     display: none; }
 
   .svg-align {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 18px; } }
+    padding-left: 10px;
+    padding-right: 40px; }
+
+  .header-container {
+    margin-top: 0;
+    width: 80vw; } }
 
 /*# sourceMappingURL=header.styles.css.map */

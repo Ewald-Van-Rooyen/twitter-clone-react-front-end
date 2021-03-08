@@ -1,3 +1,10 @@
+.capture-container {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: calc(22.5%); }
+
 .capture-input-container {
   width: 100%;
   margin-right: 10px;
@@ -35,5 +42,10 @@
 .tweet-button:hover {
   opacity: 0.5;
   cursor: pointer; }
+
+@media screen and (max-width: 430px) {
+  .capture-container {
+    margin-top: 100px;
+    width: 70vw; } }
 
 /*# sourceMappingURL=capture.style.css.map */
