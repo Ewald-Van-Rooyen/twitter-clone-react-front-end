@@ -2,6 +2,13 @@ import React from "react";
 import "./header.styles.scss";
 import {HeaderPropsInterface} from "./headerInterfaces";
 
+/**
+ * Header section for logging out of the application
+ * Returning to the feed/home screen and
+ * viewing user information
+ * @param props
+ * @constructor
+ */
 const Header = (props: HeaderPropsInterface) => {
 
     return (<>

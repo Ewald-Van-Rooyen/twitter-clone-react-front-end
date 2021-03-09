@@ -1,6 +1,6 @@
 import {TweetInterface} from "./tweetInterface";
 import {UserInterface} from "./userInterface";
-import {UserDetailInterface} from "./userDetailInterface";
+import {UserDetailsInterface} from "./userDetailsInterface";
 
 export enum StatusEnum {
     IDLE = "IDLE",
@@ -25,7 +25,7 @@ export interface UserGlobalStateInterface {
 }
 
 export interface UserDetailsGlobalStateInterface {
-    userDetails: Array<UserDetailInterface>;
+    userDetails: Array<UserDetailsInterface>;
 }
 
 export interface StateInterface {

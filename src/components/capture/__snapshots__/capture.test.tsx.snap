@@ -22,6 +22,7 @@ exports[`Capture component tests should render the Capture component 1`] = `
     >
       <textarea
         className="capture-input"
+        data-testid="captureTweet"
         onChange={[Function]}
         placeholder="What's happening?"
         value=""

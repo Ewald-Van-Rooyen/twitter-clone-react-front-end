@@ -1,6 +1,11 @@
 import React from "react";
 import "./loader.styles.scss";
 
+/**
+ * Loader component used to display active communication with the back end
+ * I did not create this, I found it on codepen
+ * @constructor
+ */
 const Loader = () => {
     return (
         <>

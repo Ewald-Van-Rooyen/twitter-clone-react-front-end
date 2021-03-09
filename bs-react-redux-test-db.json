@@ -1,15 +1,8 @@
 {
   "tweets": [
     {
-      "id": 0,
-      "tweet": "duis do in ea veniam nulla excepteur voluptate esse fugiat quis mollit occaecat Lorem adipisicing in sit ad aute occaecat",
-      "date": "2015-01-17",
-      "claps": 47,
-      "userId": 1
-    },
-    {
       "id": 2,
-      "claps": 18,
+      "claps": 19,
       "tweet": "minim ut consequat occaecat cupidatat minim Lorem occaecat amet aliqua qui labore dolor consectetur sunt commodo minim mollit exercitation ea",
       "userId": 2,
       "date": "2015-05-06"
@@ -1000,6 +993,13 @@
       "date": "2021-3-7",
       "userId": 1,
       "id": 144
+    },
+    {
+      "tweet": "Brue",
+      "claps": 0,
+      "date": "2021-3-9",
+      "userId": 1,
+      "id": 145
     }
   ],
   "users": [

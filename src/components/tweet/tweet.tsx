@@ -11,13 +11,15 @@ import Loader from "../loader/loader";
 import "./tweet.style.scss";
 
 /**
- * Tweet component that allows for a user to like someone elses tweet
+ * Tweet component that allows for a user to like someone else's tweet
  * Remove their own tweets
+ * Disclaimer : The html section is large due to the svg's
+ * traditionally I would just leverage the UI kit for these items
  * @param props typeof TweetInterface
  * @constructor
  */
 const Tweet = (props: TweetInterface) => {
-    const [showLoader, setShowLoader] = useState(false)
+    const [showLoader, setShowLoader] = useState(false);
     const activeUser: UserInterface = useSelector(getActiveUser);
     const user = useSelector((state: GlobalStateInterface) => getUserById(state, props.userId));
     const details = useSelector((state: GlobalStateInterface) => getUserDetailsById(state, user.usersDetailsId));

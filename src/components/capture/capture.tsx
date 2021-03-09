@@ -8,22 +8,25 @@ import "./capture.style.scss";
 import TweetService from "../../services/tweetService";
 import {TweetPostInterface} from "../../interfaces/tweetInterface";
 
-const maxCharacterLength = 280;
+const maxCharacterLength = 50; // 280 is the official size limitation
 
 /**
  * Helper function to create the current date
  * in the format of yyyy-mm-dd
  */
-const getTodaysDate = (): string => {
+export const getTodaysDate = (): string => {
     // TODO if used more move to utilities
     const date = new Date();
     const month = date.getUTCMonth() + 1; // getUTCMonth starts at 0
     const day = date.getUTCDate();
+
+    const dayFormatted = day < 10 ? `0${day}` : day;
+    const monthFormatted = month < 10 ? `0${month}` : month;
+
     const year = date.getUTCFullYear();
 
-    return `${year}-${month}-${day}`;
+    return `${year}-${monthFormatted}-${dayFormatted}`;
 };
-
 
 /**
  * Component captures the users tweet
@@ -49,7 +52,9 @@ const Capture = () => {
                 userId: activeUser.id
             };
 
+            // Post tweet to BE
             dispatch(TweetService.postTweet(postTweetObject));
+            // Reset current tweet
             setTweet("");
         }
     };
@@ -57,7 +62,9 @@ const Capture = () => {
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         const currentTweetValue = event.target.value;
 
-        if (currentTweetValue.length < maxCharacterLength) {
+        // Update the tweet if it is smaller than the max permitted and exists
+        if (currentTweetValue.length < maxCharacterLength
+            && (currentTweetValue && (currentTweetValue.trim()).length > 0)) {
             setTweet(event.target.value);
         }
     };
@@ -69,7 +76,10 @@ const Capture = () => {
             </div>
             <form onSubmit={handleSubmit} className={"tweet-form"}>
                 <div className="capture-input-container">
-                        <textarea value={tweet} onChange={handleChange} className="capture-input"
+                        <textarea data-testid="captureTweet"
+                                  value={tweet}
+                                  onChange={handleChange}
+                                  className="capture-input"
                                   placeholder="What's happening?"/>
                 </div>
                 <div className="tweet-button-container">

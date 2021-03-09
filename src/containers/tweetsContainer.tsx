@@ -80,7 +80,7 @@ const TweetsContainer = () => {
     }, []);
 
 
-    // Hides the tweets if their information is still being loaded
+    // Hides the tweets elements if their information is still being loaded
     return (
         <>
             {shouldShowFeed() && (

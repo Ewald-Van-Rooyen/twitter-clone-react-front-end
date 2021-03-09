@@ -8,6 +8,11 @@ interface DetailsPropsInterface {
     tweetsPerDay: number;
 }
 
+/**
+ * Displays active users user details
+ * @param props user and userDetails by id
+ * @constructor
+ */
 const Details = (props: DetailsPropsInterface) => {
     return (<>
         <div className="user-container">
