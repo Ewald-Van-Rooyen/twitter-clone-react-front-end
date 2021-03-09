@@ -1,9 +1,10 @@
 # Twitter Clone
 
-This application attempts to mock and assimilate the Twitter application using React.
+This application attempts to mock and assimilate the Twitter application using React and Typescript.
+Upon running the application a user will be required to login. Please see the FE documentation for more information.
 
 ## Run server
-This will start up the mock server. Be sure to run this on a separate terminal to ensure that the application works properly
+This will start up the mock server. Be sure to run this on a separate terminal to ensure that the application works properly.
 
 `json-server --watch bs-react-redux-test-db.json --port 3004`
 
@@ -11,28 +12,18 @@ This will start up the mock server. Be sure to run this on a separate terminal t
 
 In the project directory, you can run:
 
+### `yarn install`
+
+To install all the requirements for the project. Do this before attempting a `yarn start`
+
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Launches the test runner in the interactive watch mode.
 
 ## Technologies
 

@@ -9,6 +9,7 @@
 
 *.docx
 *.map
+*.pdf
 bs-react-redux-test-db.json
 # testing
 /coverage
