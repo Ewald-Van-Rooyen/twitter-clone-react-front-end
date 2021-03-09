@@ -1,9 +1,15 @@
 import axios from "axios";
 import {Dispatch} from "redux";
 import {TWEETS_ACTIONS} from "../redux/actions/tweetConstants";
-import {TweetPostInterface, TweetPutInterface} from "../interfaces/tweetInterface";
+import {TweetInterface, TweetPostInterface, TweetPutInterface} from "../interfaces/tweetInterface";
 import {STATE_ACTIONS} from "../redux/actions/stateConstants";
 import {StatusEnum} from "../interfaces/globalStateInterface";
+
+const sortByDate = (a:TweetInterface,b:TweetInterface) => {
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    return dateA < dateB ? 1 : -1;
+};
 
 class TweetService {
 
@@ -12,6 +18,9 @@ class TweetService {
             dispatch({type: STATE_ACTIONS.SET_TWEETS_STATUS, payload: StatusEnum.LOADING});
             console.info("Fetching tweets");
             const {data} = await axios.get(`${process.env.REACT_APP_BASE_APIE_URL}tweets`);
+
+            // Sort by date before injecting into the system
+            data.sort(sortByDate);
             console.info("Fetching tweets success");
             dispatch({type: TWEETS_ACTIONS.FETCH_TWEETS, payload: data});
             console.info("Set tweets state");
